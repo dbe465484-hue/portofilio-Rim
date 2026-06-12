@@ -44,6 +44,8 @@ import {
   sunlogErp,
   maynPortfolio,
   dahbiArt,
+  fitlab,
+  captainPortage,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -356,6 +358,48 @@ const projects: TProject[] = [
     ],
     image: dahbiArt,
     sourceCodeLink: "https://dahbi-art.vercel.app/paintings",
+  },
+  {
+    name: "FitLab",
+    description:
+      "Personal fitness web application for tracking workouts, monitoring progress, and managing training routines. Built for daily personal use with an intuitive interface, exercise logging, and performance insights deployed on Vercel.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "fitness",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vercel",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: fitlab,
+    sourceCodeLink: "https://fitlab-kohl.vercel.app/",
+  },
+  {
+    name: "Captain Portage",
+    description:
+      "Corporate website for Captain Portage, a portage salarial platform for IT consultants. Features salary simulator, transparent pricing (300€/month fixed), service presentation, FAQ, and lead generation for freelance developers and tech experts.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "portage",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: captainPortage,
+    sourceCodeLink: "https://captain-portage.fr/",
   },
   {
     name: "Sunlog Conseil Intranet",

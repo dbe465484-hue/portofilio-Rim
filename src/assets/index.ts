@@ -45,6 +45,8 @@ import polynomialroot from "./projects/polynomialroot.png";
 import sunlogErp from "./projects/sunlog-erp.png";
 import maynPortfolio from "./projects/mayn-portfolio.png";
 import dahbiArt from "./projects/dahbi-art.png";
+import fitlab from "./projects/fitlab.png";
+import captainPortage from "./projects/captain-portage.png";
 
 export {
   logo,
@@ -89,4 +91,6 @@ export {
   sunlogErp,
   maynPortfolio,
   dahbiArt,
+  fitlab,
+  captainPortage,
 };
