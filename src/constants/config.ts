@@ -9,6 +9,7 @@ type TConfig = {
     title: string;
     fullName: string;
     email: string;
+    github: string;
   };
   hero: {
     name: string;
@@ -43,6 +44,7 @@ export const config: TConfig = {
     title: "Rim Belabadia — AI & Software Engineer",
     fullName: "Rim Belabadia",
     email: "rimbelabadia1234@gmail.com",
+    github: "https://github.com/dbe465484-hue",
   },
   hero: {
     name: "Rim",

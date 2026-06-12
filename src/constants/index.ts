@@ -6,6 +6,7 @@ import type {
   TTestimonial,
   TProject,
 } from "../types";
+import { config } from "./config";
 
 import {
   mobile,
@@ -420,7 +421,7 @@ const projects: TProject[] = [
       },
     ],
     image: sunlogconseil,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Sunlog Portage France",
@@ -441,7 +442,7 @@ const projects: TProject[] = [
       },
     ],
     image: portagefrance,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Sunlog Portage Suisse",
@@ -462,7 +463,7 @@ const projects: TProject[] = [
       },
     ],
     image: portagesuisse,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Sunlog CRM Mobile",
@@ -483,7 +484,7 @@ const projects: TProject[] = [
       },
     ],
     image: crmsunlog,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Sunlog AI Assistant",
@@ -504,7 +505,7 @@ const projects: TProject[] = [
       },
     ],
     image: sunlogaiassistant,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Smart CV Analyzer",
@@ -525,7 +526,7 @@ const projects: TProject[] = [
       },
     ],
     image: cvanalyzer,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "HR Automation Agent",
@@ -546,7 +547,7 @@ const projects: TProject[] = [
       },
     ],
     image: hrautomationagent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Arcade Gaming Platform",
@@ -567,7 +568,7 @@ const projects: TProject[] = [
       },
     ],
     image: arcadegaming,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "GlamShop E-Commerce",
@@ -588,7 +589,7 @@ const projects: TProject[] = [
       },
     ],
     image: glameshop,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "E-Library Mobile",
@@ -609,7 +610,7 @@ const projects: TProject[] = [
       },
     ],
     image: elibrarymobile,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Library Management System",
@@ -630,7 +631,7 @@ const projects: TProject[] = [
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Polynomial Root Calculator",
@@ -651,7 +652,7 @@ const projects: TProject[] = [
       },
     ],
     image: polynomialroot,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "Forum BC Skills",
@@ -672,7 +673,7 @@ const projects: TProject[] = [
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: config.html.github,
   },
 ];
 
