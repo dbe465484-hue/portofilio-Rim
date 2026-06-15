@@ -47,6 +47,7 @@ import maynPortfolio from "./projects/mayn-portfolio.png";
 import dahbiArt from "./projects/dahbi-art.png";
 import fitlab from "./projects/fitlab.png";
 import captainPortage from "./projects/captain-portage.png";
+import profilePhoto from "./cv/me.jpeg";
 
 export {
   logo,
@@ -93,4 +94,5 @@ export {
   dahbiArt,
   fitlab,
   captainPortage,
+  profilePhoto,
 };

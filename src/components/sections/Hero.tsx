@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { styles } from "../../constants/styles";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
+import { profilePhoto } from "../../assets";
 
 // Typewriter effect hook
 const useTypewriter = (words: string[], typingSpeed = 100, deletingSpeed = 50, pauseDuration = 2000) => {
@@ -131,6 +132,23 @@ const Hero = () => {
             </span>
           </motion.div>
 
+          {/* Profile Photo - Mobile */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mb-6 flex justify-center lg:hidden"
+          >
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#f472b6] to-[#ec4899] opacity-75 blur-sm" />
+              <img
+                src={profilePhoto}
+                alt={config.html.fullName}
+                className="relative h-32 w-32 rounded-full border-4 border-primary object-cover shadow-xl"
+              />
+            </div>
+          </motion.div>
+
           {/* Main Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -255,13 +273,31 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Right Side - Stats Cards */}
+        {/* Right Side - Profile & Stats */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="hidden lg:flex flex-col gap-4"
+          className="hidden lg:flex flex-col items-center gap-6"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="relative"
+          >
+            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-[#f472b6] to-[#ec4899] opacity-60 blur-md" />
+            <img
+              src={profilePhoto}
+              alt={config.html.fullName}
+              className="relative h-44 w-44 rounded-full border-4 border-primary object-cover shadow-2xl"
+            />
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-tertiary/90 backdrop-blur-sm px-4 py-1 text-[13px] font-medium text-white border border-white/10">
+              {config.html.fullName}
+            </div>
+          </motion.div>
+
+          <div className="flex flex-col gap-4 w-full">
           {[
             { value: 3, suffix: "+", label: "Years Experience", iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" },
             { value: 12, suffix: "+", label: "Projects Delivered", iconPath: "M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" },
@@ -289,6 +325,7 @@ const Hero = () => {
               </div>
             </motion.div>
           ))}
+          </div>
         </motion.div>
       </div>
 

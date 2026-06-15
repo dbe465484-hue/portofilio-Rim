@@ -6,6 +6,7 @@ import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { profilePhoto } from "../../assets";
 
 interface IServiceCard {
   index: number;
@@ -172,6 +173,18 @@ const About = () => {
           className="lg:col-span-2"
         >
           <div className="rounded-2xl bg-gradient-to-br from-tertiary to-black-100 p-6 h-full">
+            <div className="mb-6 flex flex-col items-center text-center">
+              <div className="relative mb-4">
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#f472b6] to-[#ec4899] opacity-70 blur-sm" />
+                <img
+                  src={profilePhoto}
+                  alt={config.html.fullName}
+                  className="relative h-28 w-28 rounded-full border-4 border-primary object-cover"
+                />
+              </div>
+              <h3 className="text-white text-[20px] font-bold">{config.html.fullName}</h3>
+              <p className="text-[#f472b6] text-[14px] font-medium mt-1">AI & Software Engineer</p>
+            </div>
             <h4 className="text-[14px] text-[#f472b6] uppercase tracking-wider mb-4">
               What Drives Me
             </h4>
