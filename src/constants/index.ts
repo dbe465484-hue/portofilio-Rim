@@ -208,8 +208,8 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "Senior Software Engineer",
-    companyName: "Optipark",
+    title: "Full Stack Software Engineer — ERP & Applications",
+    companyName: "Usual IT",
     icon: starbucks,
     iconBg: "#1a1a2e",
     date: "October 2025 - Present",
@@ -291,7 +291,7 @@ const testimonials: TTestimonial[] = [
       "Working with Rim was a pleasure. She brings creativity, technical expertise, and excellent communication skills to every project she touches.",
     name: "Team Lead",
     designation: "Software Architect",
-    company: "Optipark",
+    company: "Usual IT",
     image: "https://randomuser.me/api/portraits/men/67.jpg",
   },
 ];
