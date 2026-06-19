@@ -39,7 +39,6 @@ import {
   cvanalyzer,
   hrautomationagent,
   arcadegaming,
-  glameshop,
   elibrarymobile,
   polynomialroot,
   sunlogErp,
@@ -47,6 +46,7 @@ import {
   dahbiArt,
   fitlab,
   captainPortage,
+  biol,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -571,25 +571,25 @@ const projects: TProject[] = [
     sourceCodeLink: config.html.github,
   },
   {
-    name: "GlamShop E-Commerce",
+    name: "Biol",
     description:
-      "Full-stack e-commerce platform for cosmetics and makeup products. Features product catalog, shopping cart, secure payments, order tracking, and admin dashboard. Includes a companion mobile app for seamless shopping on-the-go.",
+      "Biological analysis platform for managing lab workflows, patient data, and medical test results. Features secure authentication, role-based dashboards, result tracking, and a modern interface for healthcare professionals and laboratory teams.",
     tags: [
       {
-        name: "spring-boot",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "react-native",
+        name: "healthcare",
         color: "green-text-gradient",
       },
       {
-        name: "mysql",
+        name: "vercel",
         color: "pink-text-gradient",
       },
     ],
-    image: glameshop,
-    sourceCodeLink: config.html.github,
+    image: biol,
+    sourceCodeLink: "https://biol-beta.vercel.app/login",
   },
   {
     name: "E-Library Mobile",

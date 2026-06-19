@@ -39,7 +39,7 @@ import sunlogconseil from "./projects/sunlogconseil.png";
 import cvanalyzer from "./projects/cvanalyzer.png";
 import hrautomationagent from "./projects/hrautomationagent.png";
 import arcadegaming from "./projects/arcadegaming.png";
-import glameshop from "./projects/glameshop.png";
+import biol from "./projects/biol.png";
 import elibrarymobile from "./projects/elibrarymobile.png";
 import polynomialroot from "./projects/polynomialroot.png";
 import sunlogErp from "./projects/sunlog-erp.png";
@@ -86,7 +86,6 @@ export {
   cvanalyzer,
   hrautomationagent,
   arcadegaming,
-  glameshop,
   elibrarymobile,
   polynomialroot,
   sunlogErp,
@@ -95,4 +94,5 @@ export {
   fitlab,
   captainPortage,
   profilePhoto,
+  biol,
 };

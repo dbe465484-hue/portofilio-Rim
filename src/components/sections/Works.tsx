@@ -18,9 +18,9 @@ const categories = [
 ];
 
 const getProjectCategory = (name: string): string => {
-  const aiKeywords = ["AI", "Chatbot", "Smart", "CV Analyzer", "HR Automation", "Polynomial"];
+  const aiKeywords = ["AI", "Chatbot", "Smart", "CV Analyzer", "HR Automation", "Polynomial", "Biol"];
   const enterpriseKeywords = ["Sunlog", "ERP", "Intranet", "CRM", "Portage", "Forum", "Captain"];
-  const mobileKeywords = ["Mobile", "E-Library", "GlamShop", "FitLab"];
+  const mobileKeywords = ["Mobile", "E-Library", "FitLab"];
 
   if (aiKeywords.some((k) => name.includes(k))) return "ai";
   if (enterpriseKeywords.some((k) => name.includes(k))) return "enterprise";
