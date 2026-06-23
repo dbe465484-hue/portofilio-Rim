@@ -316,7 +316,7 @@ const projects: TProject[] = [
       },
     ],
     image: sunlogErp,
-    sourceCodeLink: "https://erp.sunlog.net/dashboard",
+    sourceCodeLink: config.html.github,
   },
   {
     name: "MAYN Portfolio",
