@@ -41,14 +41,17 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "Rim Belabadia — AI & Software Engineer",
+    title: "Rim Belabadia, AI & Software Engineer",
     fullName: "Rim Belabadia",
     email: "rimbelabadia1234@gmail.com",
     github: "https://github.com/dbe465484-hue",
   },
   hero: {
     name: "Rim",
-    p: ["AI Engineer & Full Stack Developer", "Building intelligent solutions that make a difference."],
+    p: [
+      "I build AI systems that feel useful, not just impressive.",
+      "AI Agents, LangGraph, Vector DBs & Prompt Engineering, with a full-stack craft behind them.",
+    ],
   },
   contact: {
     p: "Let's Connect",
@@ -68,27 +71,25 @@ export const config: TConfig = {
   sections: {
     about: {
       p: "Introduction",
-      h2: "Overview.",
-      content: `MIAGE Engineer passionate about building intelligent digital solutions. I specialize in AI-powered applications, conversational systems, and full-stack development.
+      h2: "About",
+      content: `Hello, I'm Rim, a MIAGE engineer who loves turning messy ideas into calm, working products. Most of my energy goes into AI Agents, LangGraph workflows, Vector Databases, Prompt Engineering, and the full-stack systems that make them reliable in production.
 
-My expertise spans from designing chatbots and AI assistants to developing scalable web and mobile applications. I combine strong analytical skills with a creative approach to solve complex technical challenges.
+I care about the details that users never see: grounding RAG answers, evaluating prompts, defending against injection, and shipping interfaces that feel simple.
 
-Currently working as a Software Engineer, I bring hands-on experience with modern technologies including React, Node.js, Python, and various AI/ML frameworks. I'm driven by the potential of AI to transform user experiences and business processes.
-
-Always eager to learn and innovate, I'm particularly interested in projects at the intersection of AI, UX, and emerging technologies.`,
+Right now I work as a Software Engineer, building agentic tools with LangChain, LangGraph, OpenAI, React, Node.js, and Python. If you're curious about thoughtful AI products (not just demos), we'll probably get along.`,
     },
     experience: {
-      p: "My Journey",
-      h2: "Experience.",
+      p: "Roles",
+      h2: "Experience",
     },
     feedbacks: {
-      p: "Recommendations",
-      h2: "What Colleagues Say.",
+      p: "Credentials",
+      h2: "Certifications",
     },
     works: {
-      p: "My Portfolio",
-      h2: "Projects.",
-      content: `From enterprise intranets to AI-powered chatbots and mobile applications. These projects showcase my expertise across full-stack development, artificial intelligence, and cross-platform solutions.`,
+      p: "Selected work",
+      h2: "Projects",
+      content: `Things I've shipped, AI agents, RAG systems, and full-stack products.`,
     },
   },
 };

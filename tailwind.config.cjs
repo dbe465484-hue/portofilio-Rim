@@ -5,23 +5,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0a0a0f",
-        secondary: "#aaa6c3",
-        tertiary: "#1a1a2e",
-        "black-100": "#16161d",
-        "black-200": "#0d0d12",
-        "white-100": "#f3f3f3",
-        "pink-accent": "#f472b6",
-        "pink-soft": "#fce7f3",
+        primary: "#f3efe4",
+        secondary: "#292524",
+        tertiary: "#fffdf8",
+        "black-100": "#efe9de",
+        "black-200": "#e5dfd2",
+        "white-100": "#141210",
+        ink: "#141210",
+        accent: "#e11d48",
+        "accent-soft": "rgba(225, 29, 72, 0.1)",
+        modern: "#e11d48",
+        muted: "#292524",
+        line: "#d9d2c5",
+      },
+      fontFamily: {
+        sans: ['"Source Serif 4"', "Georgia", "Times New Roman", "serif"],
+        body: ['"Source Serif 4"', "Georgia", "Times New Roman", "serif"],
+        hero: ['"Inknut Antiqua"', "Georgia", "serif"],
+        section: ['"Instrument Serif"', "Georgia", "serif"],
+        subtitle: ['"Domine"', "Georgia", "serif"],
+        /* alias kept for older class names → title font */
+        display: ['"Instrument Serif"', "Georgia", "serif"],
       },
       boxShadow: {
-        card: "0px 35px 120px -15px rgba(244, 114, 182, 0.25)",
+        card: "none",
+        soft: "none",
+        lift: "none",
       },
       screens: {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/hero.JPG')",
+        "hero-pattern": "none",
       },
     },
   },

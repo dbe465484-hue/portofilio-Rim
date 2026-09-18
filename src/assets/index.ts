@@ -39,7 +39,9 @@ import sunlogconseil from "./projects/sunlogconseil.png";
 import cvanalyzer from "./projects/cvanalyzer.png";
 import hrautomationagent from "./projects/hrautomationagent.png";
 import arcadegaming from "./projects/arcadegaming.png";
+import glameshop from "./projects/glameshop.png";
 import biol from "./projects/biol.png";
+import flutterShop from "./projects/flutter-shop.png";
 import elibrarymobile from "./projects/elibrarymobile.png";
 import polynomialroot from "./projects/polynomialroot.png";
 import sunlogErp from "./projects/sunlog-erp.png";
@@ -48,6 +50,7 @@ import dahbiArt from "./projects/dahbi-art.png";
 import fitlab from "./projects/fitlab.png";
 import captainPortage from "./projects/captain-portage.png";
 import profilePhoto from "./cv/me.jpeg";
+import heroMe from "./cv/herome.png";
 
 export {
   logo,
@@ -86,6 +89,8 @@ export {
   cvanalyzer,
   hrautomationagent,
   arcadegaming,
+  glameshop,
+  flutterShop,
   elibrarymobile,
   polynomialroot,
   sunlogErp,
@@ -94,5 +99,6 @@ export {
   fitlab,
   captainPortage,
   profilePhoto,
+  heroMe,
   biol,
 };

@@ -29,18 +29,14 @@ import {
   starbucks,
   tesla,
   shopify,
-  jobit,
   threejs,
   crmsunlog,
-  portagefrance,
-  portagesuisse,
   sunlogaiassistant,
   sunlogconseil,
   cvanalyzer,
   hrautomationagent,
-  arcadegaming,
-  elibrarymobile,
-  polynomialroot,
+  glameshop,
+  flutterShop,
   sunlogErp,
   maynPortfolio,
   dahbiArt,
@@ -56,7 +52,19 @@ export const navLinks: TNavLink[] = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience",
+  },
+  {
+    id: "tech",
+    title: "Skills",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
   },
   {
     id: "contact",
@@ -129,7 +137,7 @@ const technologies: TTechnology[] = [
     name: "Three JS",
     icon: threejs,
   },
-  // Backend & Databases
+  // Backend & Databases
   {
     name: "Node JS",
     icon: nodejs,
@@ -167,7 +175,7 @@ const technologies: TTechnology[] = [
     name: "React Native",
     icon: reactjs,
   },
-  // DevOps & Tools
+  // DevOps & Tools
   {
     name: "git",
     icon: git,
@@ -208,37 +216,29 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "Full Stack Software Engineer — ERP & Applications",
+    title: "Full Stack Software Engineer, ERP & Applications",
     companyName: "Usual IT",
     icon: starbucks,
     iconBg: "#1a1a2e",
-    date: "October 2025 - Present",
+    date: "October 2025, Present",
     points: [
-      "Leading the end-to-end design and development of a custom ERP platform with NestJS and Next.js, unifying finance, HR, inventory, and operations in a single scalable enterprise solution.",
-      "Architected seamless bidirectional integration with Sage accounting software (Sage 100 / Sage X3) via REST APIs and custom middleware, automating invoicing, payroll sync, and real-time financial reporting.",
-      "Built a modular microservices backend with NestJS (TypeORM, Prisma, PostgreSQL, Redis, RabbitMQ) and a high-performance Next.js dashboard (SSR, App Router, Tailwind CSS) serving 200+ daily active users.",
-      "Designed and implemented core ERP modules: purchase orders, stock management, client billing, employee timesheets, CRM, and executive KPI dashboards with granular role-based access control (RBAC).",
-      "Developed full-stack web applications and cross-platform mobile apps (React Native, Flutter) for field teams, client portals, and real-time operational workflows with offline-first capabilities.",
-      "Deployed and managed cloud infrastructure on AWS and Google Cloud: Docker containerization, Kubernetes orchestration, Nginx reverse proxy, SSL/TLS, load balancing, and auto-scaling for 99.9% uptime.",
-      "Established end-to-end CI/CD pipelines (GitHub Actions, GitLab CI) with automated testing (Jest, Cypress, Playwright), code quality gates (SonarQube), and blue-green deployments for zero-downtime releases.",
-      "Implemented robust security architecture: OAuth2, JWT authentication, API rate limiting, data encryption at rest and in transit, and OWASP security best practices across all production systems.",
-      "Developed AI-powered chatbots and RAG-based assistants (LangChain, OpenAI API, vector databases) integrated into the ERP, reducing internal support tickets by 35% and accelerating management decisions.",
-      "Optimized database performance with PostgreSQL query tuning, Redis caching strategies, MongoDB for document storage, automated backups, and disaster recovery procedures.",
-      "Set up monitoring and observability stack: Prometheus, Grafana dashboards, centralized logging (ELK), error tracking (Sentry), and performance profiling for proactive incident response.",
-      "Led Agile/Scrum ceremonies, conducted code reviews, authored technical documentation, mentored junior developers, and collaborated directly with product owners and business stakeholders on roadmap delivery.",
+      "Leading end-to-end design of a custom ERP (NestJS + Next.js) unifying finance, HR, inventory, and operations for 200+ daily users.",
+      "Built bidirectional Sage integration (REST + middleware) to automate invoicing, payroll sync, and financial reporting.",
+      "Shipped AI Agents and RAG assistants (LangChain / LangGraph, Vector DBs) inside the ERP, cutting internal support tickets by 35%.",
+      "Owned cloud delivery on AWS/GCP with Docker, CI/CD, monitoring, and security hardening for production uptime.",
     ],
   },
   {
-    title: "AI & Machine Learning Engineer Intern",
+    title: "AI & Machine Learning Engineer Intern",
     companyName: "BC Skills Group",
     icon: tesla,
     iconBg: "#16161d",
-    date: "March 2025 – September 2025",
+    date: "March 2025, September 2025",
     points: [
-      "Developed machine learning models for natural language processing and computer vision applications.",
-      "Built end-to-end data pipelines for training, evaluation, and deployment of ML models.",
-      "Created RESTful APIs to serve AI models in production environments using FastAPI and Docker.",
-      "Collaborated with data scientists to optimize model performance and reduce inference latency.",
+      "Built NLP and computer-vision models with end-to-end training and evaluation pipelines.",
+      "Served models in production via FastAPI and Docker with LLMOps-oriented monitoring.",
+      "Explored Cybersecurity AI: anomaly detection and hardening AI endpoints against abuse.",
+      "Collaborated with data scientists to cut inference latency and improve model quality.",
     ],
   },
   {
@@ -246,12 +246,12 @@ const experiences: TExperience[] = [
     companyName: "Devoteam",
     icon: shopify,
     iconBg: "#1a1a2e",
-    date: "July 2024 – September 2024",
+    date: "July 2024, September 2024",
     points: [
-      "Developed intelligent applications leveraging OpenAI, Azure Cognitive Services, and other generative AI APIs.",
-      "Built proof-of-concept prototypes for enterprise AI solutions, including document analysis and automated workflows.",
-      "Integrated conversational AI capabilities into existing business applications.",
-      "Documented technical specifications and presented solutions to stakeholders.",
+      "Built intelligent apps on OpenAI and Azure Cognitive Services for enterprise workflows.",
+      "Delivered PoCs for document analysis and automated business processes.",
+      "Integrated conversational AI into existing apps with secure LLMOps deployment patterns.",
+      "Documented specs and presented solutions to stakeholders.",
     ],
   },
   {
@@ -261,10 +261,10 @@ const experiences: TExperience[] = [
     iconBg: "#16161d",
     date: "Summer 2023",
     points: [
-      "Contributed to the development of internal web applications using modern JavaScript frameworks.",
-      "Implemented responsive UI components and ensured cross-browser compatibility.",
-      "Participated in agile sprints, code reviews, and technical documentation.",
-      "Gained hands-on experience with database design and REST API development.",
+      "Contributed to internal web apps with modern JavaScript frameworks.",
+      "Implemented responsive UI components with cross-browser compatibility.",
+      "Joined agile sprints, code reviews, and technical documentation.",
+      "Practiced database design and REST API development.",
     ],
   },
 ];
@@ -296,385 +296,284 @@ const testimonials: TTestimonial[] = [
   },
 ];
 
+const tagColors = [
+  "blue-text-gradient",
+  "green-text-gradient",
+  "pink-text-gradient",
+  "orange-text-gradient",
+] as const;
+
+const makeTags = (names: string[]) =>
+  names.map((name, i) => ({
+    name,
+    color: tagColors[i % tagColors.length],
+  }));
+
 const projects: TProject[] = [
   {
-    name: "Sunlog ERP",
+    name: "MedAssist AI",
     description:
-      "Enterprise Resource Planning platform with a real-time dashboard for finance, HR, inventory, and operations. Built with NestJS and Next.js, featuring Sage accounting integration, role-based access control, KPI analytics, and automated billing workflows.",
-    tags: [
-      {
-        name: "nestjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nextjs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "erp",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sunlogErp,
+      "Intelligent medical assistant built with LLMs + RAG. LangGraph agents retrieve grounded answers from clinical docs in a Vector DB, apply Prompt Engineering guardrails, and never invent unsupported medical claims. Designed for protocol lookup and triage guidance with audit-friendly citations.",
+    tags: makeTags([
+      "langgraph",
+      "ai-agents",
+      "rag",
+      "vector-db",
+      "prompt-engineering",
+      "langchain",
+      "fastapi",
+      "openai",
+    ]),
+    image: biol,
     sourceCodeLink: config.html.github,
-  },
-  {
-    name: "MAYN Portfolio",
-    description:
-      "Client portfolio website for MAYN — Montage & Tournage. A cinematic showcase platform highlighting video production work, services, and brand identity with smooth animations, responsive design, and a modern visual experience deployed on Vercel.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react",
-        color: "green-text-gradient",
-      },
-      {
-        name: "vercel",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: maynPortfolio,
-    sourceCodeLink: "https://mayn-portfolio.vercel.app/",
-  },
-  {
-    name: "Dahbi Machrouhi Fine Art",
-    description:
-      "E-commerce art gallery for painter Dahbi Machrouhi featuring 38+ original paintings and prints. Full online boutique with collection filters, availability status, custom orders, multi-currency support, and an elegant gallery experience for fine art collectors.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "e-commerce",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: dahbiArt,
-    sourceCodeLink: "https://dahbi-art.vercel.app/paintings",
-  },
-  {
-    name: "FitLab",
-    description:
-      "Personal fitness web application for tracking workouts, monitoring progress, and managing training routines. Built for daily personal use with an intuitive interface, exercise logging, and performance insights deployed on Vercel.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "fitness",
-        color: "green-text-gradient",
-      },
-      {
-        name: "vercel",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: fitlab,
-    sourceCodeLink: "https://fitlab-kohl.vercel.app/",
-  },
-  {
-    name: "Captain Portage",
-    description:
-      "Corporate website for Captain Portage, a portage salarial platform for IT consultants. Features salary simulator, transparent pricing (300€/month fixed), service presentation, FAQ, and lead generation for freelance developers and tech experts.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "portage",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: captainPortage,
-    sourceCodeLink: "https://captain-portage.fr/",
-  },
-  {
-    name: "Sunlog Conseil Intranet",
-    description:
-      "A comprehensive intranet platform for Sunlog Conseil, streamlining internal communication, document management, and employee collaboration. Features include role-based access control, real-time notifications, and integrated HR tools.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sunlogconseil,
-    sourceCodeLink: config.html.github,
-  },
-  {
-    name: "Sunlog Portage France",
-    description:
-      "Dedicated intranet solution for Sunlog Portage France, enabling seamless management of freelance consultants, contracts, timesheets, and invoicing. Includes a dashboard for real-time business analytics and compliance tracking.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "spring-boot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "postgresql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: portagefrance,
-    sourceCodeLink: config.html.github,
-  },
-  {
-    name: "Sunlog Portage Suisse",
-    description:
-      "Multilingual intranet platform adapted for Swiss regulations and compliance. Features multi-currency support, canton-specific tax calculations, and integration with Swiss administrative systems for portage salarial management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "spring-boot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: portagesuisse,
-    sourceCodeLink: config.html.github,
-  },
-  {
-    name: "Sunlog CRM Mobile",
-    description:
-      "Cross-platform mobile CRM application for Sunlog sales teams. Provides offline-first functionality, contact management, opportunity tracking, and real-time synchronization with the main CRM system. Push notifications for important updates.",
-    tags: [
-      {
-        name: "react-native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "rest-api",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: crmsunlog,
-    sourceCodeLink: config.html.github,
+    category: "ai",
+    featured: true,
+    impact: "Grounded RAG answers + safety guardrails for clinical workflows",
   },
   {
     name: "Sunlog AI Assistant",
     description:
-      "Enterprise chatbot trained on Sunlog's internal knowledge base. Provides instant answers to employee queries about company policies, procedures, and documentation. Features RAG architecture with custom embeddings for accurate, context-aware responses.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "langchain",
-        color: "green-text-gradient",
-      },
-      {
-        name: "openai",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Enterprise knowledge assistant with AI Agents over internal docs. LangGraph orchestrates retrieval, tool calls, and escalation; Vector DB + Prompt Engineering keep answers source-cited. Integrated into ERP workflows for policy, HR, and ops Q&A.",
+    tags: makeTags([
+      "langgraph",
+      "ai-agents",
+      "langchain",
+      "rag",
+      "vector-db",
+      "prompt-engineering",
+      "openai",
+      "pinecone",
+    ]),
     image: sunlogaiassistant,
     sourceCodeLink: config.html.github,
+    category: "ai",
+    featured: true,
+    impact: "−35% internal support tickets via RAG agents in production",
   },
   {
     name: "Smart CV Analyzer",
     description:
-      "AI-powered recruitment assistant that automatically analyzes CVs, extracts key competencies, and generates tailored interview questions with suggested answers. Helps HR teams streamline candidate evaluation and maintain consistent hiring standards.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nlp",
-        color: "green-text-gradient",
-      },
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Recruitment AI that parses CVs, extracts skills, and generates interview questions with suggested answers. NLP + LLM pipeline with structured Prompt Engineering for consistent, bias-aware evaluation across hiring teams.",
+    tags: makeTags([
+      "python",
+      "nlp",
+      "openai",
+      "prompt-engineering",
+      "fastapi",
+      "react",
+      "spacy",
+      "postgresql",
+    ]),
     image: cvanalyzer,
     sourceCodeLink: config.html.github,
+    category: "ai",
+    featured: true,
+    impact: "Faster screening with structured, repeatable interview packs",
   },
   {
     name: "HR Automation Agent",
     description:
-      "Intelligent agent automating HR workflows including leave management, absence tracking, and approval processes. Features conversational interface for employees to submit requests, automatic manager notifications, and integration with calendar systems.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "fastapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "ai-agents",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Agentic HR copilot for leave, absences, and approvals. LangGraph routes intents to tools (calendar, notifications, DB); Prompt Engineering enforces role policies. Employees chat requests; managers get auto-summaries.",
+    tags: makeTags([
+      "ai-agents",
+      "langgraph",
+      "langchain",
+      "fastapi",
+      "postgresql",
+      "celery",
+      "redis",
+      "openai",
+    ]),
     image: hrautomationagent,
     sourceCodeLink: config.html.github,
+    category: "ai",
+    featured: true,
+    impact: "Automated leave workflows with agent tool-calling",
   },
   {
-    name: "Arcade Gaming Platform",
+    name: "Sunlog ERP",
     description:
-      "Retro gaming platform featuring classic arcade games: Pacman, Bouncyman, and JetFighter. Built with .NET C# for smooth gameplay, ODBC database connectivity for high scores and user profiles. Includes multiplayer modes and achievement systems.",
-    tags: [
-      {
-        name: "csharp",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "dotnet",
-        color: "green-text-gradient",
-      },
-      {
-        name: "odbc",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: arcadegaming,
+      "Custom ERP unifying finance, HR, inventory, and ops. NestJS + Next.js, Sage integration, RBAC, KPI dashboards, and embedded AI assistants. Production platform used daily by operations teams.",
+    tags: makeTags([
+      "nestjs",
+      "nextjs",
+      "postgresql",
+      "typescript",
+      "sage",
+      "docker",
+      "redis",
+      "langgraph",
+    ]),
+    image: sunlogErp,
     sourceCodeLink: config.html.github,
+    category: "enterprise",
+    featured: true,
+    impact: "200+ DAU · Sage sync · AI copilots inside ERP",
   },
   {
     name: "Biol",
     description:
-      "Biological analysis platform for managing lab workflows, patient data, and medical test results. Features secure authentication, role-based dashboards, result tracking, and a modern interface for healthcare professionals and laboratory teams.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "healthcare",
-        color: "green-text-gradient",
-      },
-      {
-        name: "vercel",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Biological analysis platform for lab workflows, patient data, and test results. Secure auth, role-based dashboards, and a modern UI for healthcare professionals, live in production.",
+    tags: makeTags([
+      "nextjs",
+      "prisma",
+      "postgresql",
+      "nextauth",
+      "tailwindcss",
+      "typescript",
+      "vercel",
+    ]),
     image: biol,
     sourceCodeLink: "https://biol-beta.vercel.app/login",
+    category: "fullstack",
+    featured: true,
+    impact: "Live healthcare workflow platform",
   },
   {
-    name: "E-Library Mobile",
+    name: "Flutter Shop",
     description:
-      "Cross-platform digital library application built with Flutter. Features book browsing, reading progress tracking, bookmarks, and offline reading. Firebase backend for real-time synchronization across devices and user authentication.",
-    tags: [
-      {
-        name: "flutter",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "dart",
-        color: "green-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: elibrarymobile,
-    sourceCodeLink: config.html.github,
+      "Cross-platform e-commerce app with Flutter + Firebase: onboarding, catalog, cart, auth, and real-time sync. Deployed as Flutter web with a mobile-first UX.",
+    tags: makeTags([
+      "flutter",
+      "dart",
+      "firebase",
+      "firestore",
+      "firebase-auth",
+      "cloud-storage",
+      "riverpod",
+    ]),
+    image: flutterShop,
+    sourceCodeLink: "https://web-pi-ten-56.vercel.app/",
+    category: "mobile",
+    impact: "Live Flutter + Firebase commerce demo",
   },
   {
-    name: "Library Management System",
+    name: "Dahbi Machrouhi Fine Art",
     description:
-      "Comprehensive library management solution with member registration, book cataloging, loan tracking, and fine calculation. Features a modern Angular frontend with Bootstrap styling and robust Spring Boot backend with MySQL database.",
-    tags: [
-      {
-        name: "angular",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "spring-boot",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    sourceCodeLink: config.html.github,
+      "E-commerce art gallery for painter Dahbi Machrouhi, 38+ works, filters, custom orders, multi-currency. Client delivery with polished UX on Vercel.",
+    tags: makeTags([
+      "nextjs",
+      "react",
+      "stripe",
+      "tailwindcss",
+      "typescript",
+      "i18n",
+      "vercel",
+    ]),
+    image: dahbiArt,
+    sourceCodeLink: "https://dahbi-art.vercel.app/paintings",
+    category: "fullstack",
+    impact: "Client live boutique · 38+ artworks online",
   },
   {
-    name: "Polynomial Root Calculator",
+    name: "MAYN Portfolio",
     description:
-      "Intelligent mathematical tool using machine learning to calculate polynomial roots with high precision. Microservices architecture enables scalable computation. React frontend provides intuitive equation input and visual representation of solutions.",
-    tags: [
-      {
-        name: "python-ml",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "microservices",
-        color: "green-text-gradient",
-      },
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: polynomialroot,
-    sourceCodeLink: config.html.github,
+      "Cinematic portfolio for MAYN, Montage & Tournage. Motion-rich Next.js site showcasing production work and brand identity.",
+    tags: makeTags([
+      "nextjs",
+      "react",
+      "tailwindcss",
+      "framer-motion",
+      "typescript",
+      "vercel",
+      "gsap",
+    ]),
+    image: maynPortfolio,
+    sourceCodeLink: "https://mayn-portfolio.vercel.app/",
+    category: "fullstack",
+    impact: "Client live brand site",
   },
   {
-    name: "Forum BC Skills",
+    name: "FitLab",
     description:
-      "Plateforme collaborative moderne développée pour faciliter la communication interne et le partage de connaissances au sein de l'entreprise. Cette solution full-stack permet aux employés d'échanger des informations, poser des questions, partager des documents et collaborer efficacement avec des fonctionnalités administratives avancées.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
+      "Personal fitness tracker for workouts, progress, and routines. Fast React/Vite UI with charts, shipped and used daily.",
+    tags: makeTags([
+      "react",
+      "vite",
+      "typescript",
+      "tailwindcss",
+      "chartjs",
+      "zustand",
+      "vercel",
+    ]),
+    image: fitlab,
+    sourceCodeLink: "https://fitlab-kohl.vercel.app/",
+    category: "mobile",
+    impact: "Live product in daily personal use",
+  },
+  {
+    name: "Captain Portage",
+    description:
+      "Corporate site for Captain Portage with salary simulator, transparent pricing, and lead capture for IT freelancers.",
+    tags: makeTags([
+      "nextjs",
+      "react",
+      "tailwindcss",
+      "typescript",
+      "seo",
+      "vercel",
+      "analytics",
+    ]),
+    image: captainPortage,
+    sourceCodeLink: "https://captain-portage.fr/",
+    category: "enterprise",
+    impact: "Live lead-gen platform for portage salarial",
+  },
+  {
+    name: "Sunlog Conseil Intranet",
+    description:
+      "Enterprise intranet for communication, documents, and HR tools. Real-time notifications, RBAC, and collaboration features for internal teams.",
+    tags: makeTags([
+      "react",
+      "nodejs",
+      "express",
+      "mongodb",
+      "jwt",
+      "socket.io",
+      "aws-s3",
+    ]),
+    image: sunlogconseil,
     sourceCodeLink: config.html.github,
+    category: "enterprise",
+    impact: "Centralized internal ops & document access",
+  },
+  {
+    name: "Sunlog CRM Mobile",
+    description:
+      "Offline-first React Native CRM for sales teams: contacts, opportunities, sync, and push notifications tied to the main CRM.",
+    tags: makeTags([
+      "react-native",
+      "typescript",
+      "redux",
+      "firebase",
+      "expo",
+      "rest-api",
+      "push-notifications",
+    ]),
+    image: crmsunlog,
+    sourceCodeLink: config.html.github,
+    category: "mobile",
+    impact: "Field sales CRM with offline sync",
+  },
+  {
+    name: "ShopSphere E-Commerce",
+    description:
+      "Full Laravel/PHP commerce stack: catalog, cart, checkout, payments, admin dashboard with Eloquent + MySQL.",
+    tags: makeTags([
+      "laravel",
+      "php",
+      "mysql",
+      "blade",
+      "eloquent",
+      "stripe",
+      "redis",
+    ]),
+    image: glameshop,
+    sourceCodeLink: config.html.github,
+    category: "fullstack",
+    impact: "End-to-end commerce + admin back-office",
   },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
+

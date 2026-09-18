@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
 
 import {
   About,
@@ -10,10 +11,10 @@ import {
   Footer,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
-import { useEffect } from "react";
 import { config } from "./constants/config";
+import VersionMode from "./components/layout/VersionMode";
+import { LanguageProvider } from "./i18n";
 
 const App = () => {
   useEffect(() => {
@@ -23,24 +24,22 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="bg-primary relative z-0">
-        <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+    <LanguageProvider>
+      <BrowserRouter>
+        <div className="paper-sheet relative z-0 min-h-screen">
           <Navbar />
           <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Certifications />
-        <div className="relative z-0">
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Certifications />
           <Contact />
-          <StarsCanvas />
+          <Footer />
+          <VersionMode />
         </div>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 };
 
