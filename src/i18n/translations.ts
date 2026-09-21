@@ -461,7 +461,7 @@ Right now I work as a Software Engineer, building agentic tools with LangChain, 
       close: "Close",
       eyebrow: "Grounded assistant",
       title: "Ask the portfolio",
-      hint: "Answers come from this site’s content — profile, roles, projects, skills — not from external training.",
+      hint: "Answers come from this site’s content — profile, roles, projects, skills — via retrieval + a local or cloud LLM.",
       welcome:
         "Hi — I can answer from Rim’s portfolio: experience, AI projects, skills, or how to reach her.",
       placeholder: "Ask about experience, projects, skills…",
@@ -838,7 +838,7 @@ Aujourd'hui, je travaille comme Software Engineer sur des outils agentiques avec
       close: "Fermer",
       eyebrow: "Assistant ancré",
       title: "Interroger le portfolio",
-      hint: "Les réponses viennent du contenu de ce site — profil, rôles, projets, compétences — pas d’un entraînement externe.",
+      hint: "Les réponses viennent du contenu de ce site — profil, rôles, projets, compétences — via retrieval + un LLM local ou cloud.",
       welcome:
         "Bonjour — je réponds à partir du portfolio de Rim : expérience, projets AI, compétences, ou comment la contacter.",
       placeholder: "Question sur l’expérience, les projets, les skills…",

@@ -8,13 +8,45 @@ const tokenize = (text: string): string[] =>
     .split(/[^a-z0-9+#.\-]+/)
     .filter((token) => token.length > 1);
 
+/** Expand query terms with FR/EN portfolio synonyms for better recall. */
+const expandQuery = (tokens: string[]): string[] => {
+  const synonyms: Record<string, string[]> = {
+    who: ["rim", "profil", "about", "qui"],
+    qui: ["rim", "profil", "about", "who"],
+    about: ["profil", "rim", "presentation"],
+    contact: ["email", "mail", "hire", "recrut", "joindre"],
+    hire: ["contact", "email", "recrut", "disponible"],
+    skill: ["skills", "stack", "competence", "techno", "outil"],
+    skills: ["skill", "stack", "competence", "techno"],
+    competence: ["skills", "stack", "techno"],
+    stack: ["skills", "techno", "react", "python", "langchain"],
+    experience: ["role", "travail", "job", "career", "usual", "devoteam"],
+    role: ["experience", "travail"],
+    projet: ["project", "portfolio", "rag", "agent"],
+    project: ["projet", "portfolio", "rag", "agent"],
+    rag: ["vector", "retrieval", "langchain", "agent"],
+    agent: ["agents", "langgraph", "langchain", "rag"],
+    agents: ["agent", "langgraph", "langchain"],
+    ai: ["ia", "llm", "openai", "langgraph"],
+    ia: ["ai", "llm", "openai"],
+    remote: ["contact", "disponible", "hire"],
+  };
+
+  const out = new Set(tokens);
+  for (const token of tokens) {
+    const extras = synonyms[token];
+    if (extras) extras.forEach((item) => out.add(item));
+  }
+  return [...out];
+};
+
 /** Lightweight lexical retrieval over portfolio chunks (no external embeddings). */
 export const retrieveChunks = (
   query: string,
   chunks: KnowledgeChunk[],
-  limit = 4
+  limit = 5
 ): KnowledgeChunk[] => {
-  const tokens = tokenize(query);
+  const tokens = expandQuery(tokenize(query));
   if (tokens.length === 0) return chunks.slice(0, limit);
 
   const scored = chunks.map((chunk) => {
@@ -22,17 +54,22 @@ export const retrieveChunks = (
     const set = new Set(haystack);
     let score = 0;
     for (const token of tokens) {
-      if (set.has(token)) score += 2;
+      if (set.has(token)) score += 3;
       else if (haystack.some((word) => word.includes(token) || token.includes(word))) {
         score += 1;
       }
     }
-    // Prefer profile for identity questions
+    if (chunk.id === "profile" && tokens.some((t) => ["who", "rim", "about", "profil", "qui"].includes(t))) {
+      score += 4;
+    }
+    if (chunk.id === "contact" && tokens.some((t) => ["contact", "email", "hire", "mail"].includes(t))) {
+      score += 4;
+    }
     if (
-      chunk.id === "profile" &&
-      tokens.some((t) => ["who", "rim", "about", "profil", "qui"].includes(t))
+      chunk.id.startsWith("project") &&
+      tokens.some((t) => ["project", "projet", "rag", "agent"].includes(t))
     ) {
-      score += 3;
+      score += 2;
     }
     return { chunk, score };
   });

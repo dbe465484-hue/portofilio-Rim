@@ -50,7 +50,7 @@ const PortfolioChat = () => {
     setInput("");
     setBusy(true);
 
-    const retrieved = retrieveChunks(question, knowledge, 4);
+    const retrieved = retrieveChunks(question, knowledge, 5);
     let reply = answerFromChunks({
       query: question,
       chunks: retrieved,
@@ -68,11 +68,13 @@ const PortfolioChat = () => {
         }),
       });
       if (response.ok) {
-        const data = (await response.json()) as { answer?: string | null };
+        const data = (await response.json()) as {
+          answer?: string | null;
+        };
         if (data.answer?.trim()) reply = data.answer.trim();
       }
     } catch {
-      // Local grounded answer is enough when API is offline (Vite / no key).
+      // Local grounded answer when API / Ollama is offline.
     }
 
     setMessages((prev) => [
@@ -91,6 +93,7 @@ const PortfolioChat = () => {
     <div className={`portfolio-chat ${open ? "is-open" : ""}`}>
       {open && (
         <section
+          id="portfolio-chat"
           className="portfolio-chat__panel"
           aria-label={t.chat.title}
           role="dialog"
@@ -113,7 +116,10 @@ const PortfolioChat = () => {
 
           <p className="portfolio-chat__hint">{t.chat.hint}</p>
 
-          <div className="portfolio-chat__suggestions" aria-label={t.chat.suggestionsLabel}>
+          <div
+            className="portfolio-chat__suggestions"
+            aria-label={t.chat.suggestionsLabel}
+          >
             {t.chat.suggestions.map((suggestion) => (
               <button
                 key={suggestion}
@@ -160,7 +166,11 @@ const PortfolioChat = () => {
               autoComplete="off"
               disabled={busy}
             />
-            <button type="submit" className="jc-btn-primary" disabled={busy || !input.trim()}>
+            <button
+              type="submit"
+              className="jc-btn-primary"
+              disabled={busy || !input.trim()}
+            >
               {busy ? t.chat.thinking : t.chat.send}
             </button>
           </form>
@@ -169,12 +179,60 @@ const PortfolioChat = () => {
 
       <button
         type="button"
-        className="portfolio-chat__toggle"
+        className={`portfolio-chat__toggle ${open ? "is-open" : ""}`}
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-controls="portfolio-chat"
+        aria-label={open ? t.chat.close : t.chat.open}
+        title={open ? t.chat.close : t.chat.open}
       >
-        {open ? t.chat.close : t.chat.open}
+        <span className="portfolio-chat__toggle-ring" aria-hidden="true" />
+        {open ? (
+          <svg
+            className="portfolio-chat__toggle-icon"
+            viewBox="0 0 40 40"
+            width="18"
+            height="18"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M13 13l14 14M27 13L13 27"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="portfolio-chat__toggle-icon"
+            viewBox="0 0 40 40"
+            width="28"
+            height="28"
+            fill="none"
+            aria-hidden="true"
+          >
+            {/* Postmark / wax-seal chat */}
+            <circle
+              cx="20"
+              cy="20"
+              r="15.2"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeDasharray="1.6 2.2"
+              opacity="0.55"
+            />
+            <path
+              d="M11 14.2c0-1.2.9-2.2 2.1-2.2h13.8c1.2 0 2.1 1 2.1 2.2v9.2c0 1.2-.9 2.2-2.1 2.2H18.4L14 28.8v-3.2h-.9c-1.2 0-2.1-1-2.1-2.2v-9.2z"
+              stroke="currentColor"
+              strokeWidth="1.45"
+              strokeLinejoin="round"
+            />
+            <circle cx="16.2" cy="18.8" r="1.15" fill="currentColor" />
+            <circle cx="20" cy="18.8" r="1.15" fill="currentColor" />
+            <circle cx="23.8" cy="18.8" r="1.15" fill="currentColor" />
+          </svg>
+        )}
       </button>
     </div>
   );
