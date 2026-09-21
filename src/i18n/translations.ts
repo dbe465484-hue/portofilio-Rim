@@ -84,6 +84,19 @@ export type TranslationDict = {
     switchToEn: string;
     switchToFr: string;
   };
+  chat: {
+    open: string;
+    close: string;
+    eyebrow: string;
+    title: string;
+    hint: string;
+    welcome: string;
+    placeholder: string;
+    send: string;
+    thinking: string;
+    suggestionsLabel: string;
+    suggestions: string[];
+  };
 };
 
 export const translations: Record<Lang, TranslationDict> = {
@@ -443,6 +456,25 @@ Right now I work as a Software Engineer, building agentic tools with LangChain, 
       switchToEn: "Switch to English",
       switchToFr: "Passer en français",
     },
+    chat: {
+      open: "Ask about Rim",
+      close: "Close",
+      eyebrow: "Grounded assistant",
+      title: "Ask the portfolio",
+      hint: "Answers come from this site’s content — profile, roles, projects, skills — not from external training.",
+      welcome:
+        "Hi — I can answer from Rim’s portfolio: experience, AI projects, skills, or how to reach her.",
+      placeholder: "Ask about experience, projects, skills…",
+      send: "Ask",
+      thinking: "Thinking…",
+      suggestionsLabel: "Suggested questions",
+      suggestions: [
+        "What does Rim work on?",
+        "Show AI / RAG projects",
+        "What is her stack?",
+        "How can I contact her?",
+      ],
+    },
   },
   fr: {
     nav: [
@@ -800,6 +832,25 @@ Aujourd'hui, je travaille comme Software Engineer sur des outils agentiques avec
     lang: {
       switchToEn: "Switch to English",
       switchToFr: "Passer en français",
+    },
+    chat: {
+      open: "Poser une question",
+      close: "Fermer",
+      eyebrow: "Assistant ancré",
+      title: "Interroger le portfolio",
+      hint: "Les réponses viennent du contenu de ce site — profil, rôles, projets, compétences — pas d’un entraînement externe.",
+      welcome:
+        "Bonjour — je réponds à partir du portfolio de Rim : expérience, projets AI, compétences, ou comment la contacter.",
+      placeholder: "Question sur l’expérience, les projets, les skills…",
+      send: "Demander",
+      thinking: "Réflexion…",
+      suggestionsLabel: "Questions suggérées",
+      suggestions: [
+        "Sur quoi travaille Rim ?",
+        "Montrer les projets AI / RAG",
+        "Quelle est sa stack ?",
+        "Comment la contacter ?",
+      ],
     },
   },
 };

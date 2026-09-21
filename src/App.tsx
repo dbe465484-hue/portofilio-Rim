@@ -14,6 +14,7 @@ import {
 } from "./components";
 import { config } from "./constants/config";
 import VersionMode from "./components/layout/VersionMode";
+import PortfolioChat from "./components/layout/PortfolioChat";
 import { LanguageProvider } from "./i18n";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <Certifications />
           <Contact />
           <Footer />
+          <PortfolioChat />
           <VersionMode />
         </div>
       </BrowserRouter>
